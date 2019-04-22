@@ -16,5 +16,10 @@ spec:
       containers:
         - name: jenkins
           image: jenkins/jenkins:2.150.10
+          resources:
+            limits:
+              memory: "200Mi"
+            requests:
+              memory: "100Mi"
           ports:
             - containerPort: 8080
